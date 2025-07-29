@@ -1,24 +1,27 @@
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
-import "./App.css";
+import React from "react";
+import {  Routes, Route, Link } from "react-router-dom";
+import ListaContact from "./components/ListaContact";
+import AgregarContacto from "./components/AgregarContacto";
 
-import { ImageLink } from "./components/ImageLink";
 
-export const App = () => {
-  return (
-    <>
-      <div>
-        <ImageLink src={viteLogo} alt={"Vite logo"} href={"https://vite.dev"} />
-        <ImageLink
-          src={reactLogo}
-          alt={"React logo"}
-          href={"https://react.dev"}
-        />
-      </div>
-      <h1>Vite + React</h1>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  );
-};
+
+const App = () => {
+    return (
+      
+            <div>
+                <h1>Lista de Contactos</h1>
+
+                <nav>
+                    <Link to="/">Ver Contactos</Link> | <Link to="/add">Agregar</Link>
+                </nav>
+
+                <Routes>
+                    <Route path="/" element={<ListaContact />} />
+                    <Route path="/add" element={<AgregarContacto />} />
+                </Routes>
+            </div>
+       
+    )
+}
+
+export default App;
