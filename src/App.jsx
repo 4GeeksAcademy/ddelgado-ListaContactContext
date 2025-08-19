@@ -12,7 +12,7 @@ const App = () => {
                 <h1>Lista de Contactos</h1>
 
                 <nav>
-                    <Link to="/">Ver Contactos</Link> | <Link to="/add">Agregar</Link>
+                    <Link to="/add" className="btn btn-primary">Agregar Nuevo Contacto</Link>
                 </nav>
 
                 <Routes>

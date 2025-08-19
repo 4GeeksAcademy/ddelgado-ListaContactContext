@@ -3,6 +3,7 @@ import ContactoCard from "./ContactoCard";
 import ContactoForm from "./ContactoForm"
 
 
+
 const App = () => {
   const [contactos, setContactos] = useState([]); // tu lista
   const [contactoEditando, setContactoEditando] = useState(null);
@@ -66,6 +67,7 @@ const App = () => {
       )}
     </div>
   );
-};
+
+}
 
 export default App;
